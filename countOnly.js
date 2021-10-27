@@ -10,19 +10,24 @@ const assertEqual = function(actual, expected) {
 const countOnly = function (allItems, itemsToCount){
   
   let output = {};
+  let counter
 
   for (let item of allItems){
-    for(let itemCount of itemsToCount){
+    for(let itemCount in itemsToCount){
+      counter = 0
 
-      console.log(item)
-      console.log(itemCount)
-      console.log(itemsToCount[itemCount])
+      //console.log(item)
+      // console.log(itemCount)
+      // console.log(itemsToCount[itemCount])
 
-      if (item == itemCount && itemsToCount[itemCount]){
-        output[item]++
+      if (item === itemCount && itemsToCount[itemCount]){
+        // console.log('add plus one', item)
+        counter++
+        output[item] = counter
       }
     }
   }
+  return output
 }
 
 const firstNames = [
