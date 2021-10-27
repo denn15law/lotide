@@ -7,21 +7,21 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const countOnly = function (allItems, itemsToCount){
+const countOnly = function(allItems, itemsToCount) {
   
   let output = {};
   
-  for (let item of allItems){
-    if (itemsToCount[item]){
-      if (output[item]){
-        output[item]++
-      }else {
-        output[item] = 1
+  for (let item of allItems) {
+    if (itemsToCount[item]) {
+      if (output[item]) {
+        output[item]++;
+      } else {
+        output[item] = 1;
       }
     }
   }
-  return output
-}
+  return output;
+};
 
 const firstNames = [
   "Karl",
