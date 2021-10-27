@@ -1,0 +1,28 @@
+const eqArrays = function(firstArray, secondArray) {
+  
+  let output = false;
+
+  if (firstArray.length !== secondArray.length) {
+    return output;
+  } else {
+    for (let i in firstArray) {
+      if (firstArray[i] === secondArray[i]) {
+        output = true;
+      } else {
+        output = false;
+        break;
+      }
+    }
+  }
+
+  return output;
+
+};
+
+const assertArraysEqual = function(firstArray, secondArray) {
+  if (eqArrays(firstArray, secondArray)) {
+    console.log("✅ ✅ ✅ These arrays are equal");
+  } else {
+    console.log("🚫 🚫 🚫These arrays are not equal");
+  }
+};
