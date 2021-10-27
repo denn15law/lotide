@@ -27,37 +27,59 @@ const assertArraysEqual = function(firstArray, secondArray) {
   }
 };
 
-const without = function (source, itemsToRemove){
-  let output = []
-  let keep
+const without = function(source, itemsToRemove) {
+  let output = [];
+  let keep;
 
-  for (let itemSource of source){
+  for (let itemSource of source) {
     keep = true;
-    for(let itemRemove of itemsToRemove){
+    for (let itemRemove of itemsToRemove) {
 
-      if(itemSource !== itemRemove){
+      console.log('itemSource: ', itemSource);
+      console.log('itemRemove: ', itemRemove);
+
+      if(itemSource === itemRemove){
+        console.log('equal elements, remove item')
         keep = false
-      }
-
-      if(keep){
-        output.push(itemSource)
+        break;
       }
     }
+    if (keep){
+
+      console.log('push item')
+      output.push(itemSource)
+    }
   }
-  console.log(output)
-  return output
-}
-without(["1", "2", "3"], [1, 2, "3"]) //  => ["1", "2"]
+  console.log(output);
+  return output;
+};
 
 
-
-
-
-
-
-
-
+without(["1", "2", "3"], ["1", 2, "3"]); //  => ["1", "2"]
 
 // const words = ["hello", 'world', 'lighthouse']
 // without(words, ['lighthouse'])
 // assertArraysEqual(words, ["hello", 'world', 'lighthouse'])
+
+
+
+const withoutTwo = function(source, itemsToRemove) {
+  let output = [];
+  let keep;
+  let map = {}
+  
+
+  for (let itemRemove of itemsToRemove){
+    map[itemRemove] = true
+  }
+  console.log(map)
+  for (let itemSource of source) {
+    if (map[itemSource] !== true){
+      output.push(itemSource)
+    }
+  }
+  console.log(output);
+  return output;
+};
+
+withoutTwo(['one', 'two'], ['one', 'three'])
