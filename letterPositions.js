@@ -33,7 +33,6 @@ const letterPositions = function(sentence) {
   const results = {};
   
   for (let index in sentence) {
-    console.log(sentence[index]);
     if (sentence[index] !== ' ') {
       if (results[sentence[index]]) {
         results[sentence[index]].push(Number(index));
@@ -41,9 +40,7 @@ const letterPositions = function(sentence) {
         results[sentence[index]] = [Number(index)];
       }
     }
-
   }
-
   return results;
 };
 // console.log(letterPositions('hello'));
