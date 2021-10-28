@@ -7,20 +7,20 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const findKeyByValue = function (obj, value){
+const findKeyByValue = function(obj, value) {
   
-  let result
+  let result;
 
-  for (let key in obj){
+  for (let key in obj) {
     // console.log(key, obj[key])
-    if(obj[key] === value){
-      result = key
+    if (obj[key] === value) {
+      result = key;
     }
   }
-  return result
-}
+  return result;
+};
 
-const bestTVShowsByGenre = { 
+const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire"
