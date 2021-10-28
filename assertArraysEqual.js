@@ -22,10 +22,10 @@ const eqArrays = function(firstArray, secondArray) {
 
 const assertArraysEqual = function(firstArray, secondArray) {
   if (eqArrays(firstArray, secondArray)) {
-    console.log("✅ ✅ ✅ These arrays are equal");
+    console.log(`✅ ✅ ✅ ${firstArray} === ${secondArray}`);
   } else {
-    console.log("🚫 🚫 🚫These arrays are not equal");
+    console.log(`🚫 🚫 🚫 ${firstArray} !== ${secondArray}`);
   }
 };
 
-assertArraysEqual([1, 22, 3], [1, 2, 3])
+assertArraysEqual([1, 2, 3], [1, 2, 3])

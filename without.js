@@ -21,11 +21,12 @@ const eqArrays = function(firstArray, secondArray) {
 
 const assertArraysEqual = function(firstArray, secondArray) {
   if (eqArrays(firstArray, secondArray)) {
-    console.log("✅ ✅ ✅ These arrays are equal");
+    console.log(`✅ ✅ ✅ ${firstArray} === ${secondArray}`);
   } else {
-    console.log("🚫 🚫 🚫These arrays are not equal");
+    console.log(`🚫 🚫 🚫 ${firstArray} !== ${secondArray}`);
   }
 };
+
 
 const without = function(source, itemsToRemove) {
   let output = [];
