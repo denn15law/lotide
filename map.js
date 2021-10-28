@@ -31,28 +31,28 @@ const assertArraysEqual = function(firstArray, secondArray) {
 
 const words = ["ground", "control", "to", "major", "tom"];
 
-const map = function (array, callback){
+const map = function(array, callback) {
   
   // console.log('array: ', array);
   // console.log('callback: ', callback);
-  const results = []
+  const results = [];
 
-  for (let item of array){
+  for (let item of array) {
     // console.log('item BEFORE: ', item)
     // console.log('item AFTER: ', callback(item))
     // console.log('------')
 
-    results.push(callback(item))
+    results.push(callback(item));
   }
 
-  return results
-}
+  return results;
+};
 const results1 = map(words, word => word[0]);
-const results2 = map(['hello','world'], word => word[1])
-const results3 = map(['lighthouse', 'labs'], word => word[2])
+const results2 = map(['hello','world'], word => word[1]);
+const results3 = map(['lighthouse', 'labs'], word => word[2]);
 // console.log(results1)
 
 
-assertArraysEqual(results1, ['g', 'c', 't', 'm', 't'])
-assertArraysEqual(results2, ['e', 'o'])
-assertArraysEqual(results3, ['g', 'b'])
+assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
+assertArraysEqual(results2, ['e', 'o']);
+assertArraysEqual(results3, ['g', 'b']);
