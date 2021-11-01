@@ -5,3 +5,8 @@ const assertEqual = function(actual, expected) {
     console.log(`🚫 🚫 🚫 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
+//Export
+module.exports = assertEqual;
+
+assertEqual(1,1)
