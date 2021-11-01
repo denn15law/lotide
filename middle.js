@@ -1,22 +1,16 @@
 const middle = function(arr) {
   
   let output = [];
-  let oddIndex;
-  let evenIndex = [];
 
-  if (arr.length === 1 || arr.length === 2) {
-    console.log(output.length)
+  if (arr.length < 3) {
     return output;
+  } 
+  if (arr.length % 2 === 0) {
+    output.push(arr[Math.floor(arr.length / 2) - 1])
+    output.push(arr[Math.floor(arr.length / 2)])
+
   } else {
-    if (arr.length % 2 === 0) {
-      evenIndex = [arr.length / 2 - 1, arr.length / 2];
-      for (let num of evenIndex) {
-        output.push(arr[num]);
-      }
-    } else {
-      oddIndex = Math.floor(arr.length / 2);
-      output.push(arr[oddIndex]);
-    }
+    output.push(arr[Math.floor(arr.length / 2)])
   }
   return output;
 };
