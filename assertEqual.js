@@ -8,5 +8,3 @@ const assertEqual = function(actual, expected) {
 
 //Export
 module.exports = assertEqual;
-
-assertEqual(1,1)
