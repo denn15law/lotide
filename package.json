@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@denn15_law/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "a mini-clone of Lodash library",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/denn15law/lotide.git"
   },
-  "author": "",
+  "author": "dennis law",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/denn15law/lotide/issues"
