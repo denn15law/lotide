@@ -20,5 +20,10 @@ module.exports = {
   countOnly: countOnly,
   countLetters: countLetters,
   findKey: findKey,
-  
+  findKeyByValue: findKeyByValue,
+  flatten: flatten,
+  letterPositions: letterPositions,
+  map: map,
+  takeUntil: takeUntil,
+  without: without
 }
